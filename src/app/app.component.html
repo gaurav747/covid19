@@ -1,0 +1,51 @@
+
+<!--
+<div *ngFor= " let user of users$" style="text-align: left">
+  <h2>{{user.country}} - {{user.cases}} - {{user.deaths}} - {{user.firstCase}}</h2> 
+
+</div> 
+-->
+
+
+<div>
+  <p style="font-style: italic; font-family: 'Times New Roman', Times, serif;font-size: large; text-align: left; padding-left: 50px">
+    <b>Site Created By Gaurav Pandit</b>
+  </p>
+
+  <p style="font-family: 'Times New Roman', Times, serif; font-size: larger; padding-left: 50px;">
+    The Data provided on this site is Gathered from an open Source Platform.<br>
+    The Data Gets Updated on hourly basis
+  </p>
+</div>
+
+
+<div class="container">
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th>Country/ Continent/ Globe</th>
+        <th>Total Cases</th>
+        <th>Today's Cases</th>
+        <th style="color:red;">Total Deaths</th>
+        <th style="color: red;">Today's Deaths</th>
+        <th style="color: lightgreen;">Total Recovered</th>
+        <th style="color:greenyellow;">Total Active Cases</th>       
+      </tr>
+    </thead>
+
+
+    <tbody>
+        <tr *ngFor = " let user of users$" style="text-align: left"> 
+            <td>{{user.country}}</td>
+            <td>{{user.cases}}</td>
+            <td>{{user.todayCases}}</td>
+            <td>{{user.deaths}}</td>
+            <td>{{user.todayDeaths}}</td>
+            <td>{{user.recovered}}</td>
+            <td>{{user.active}}</td>
+        </tr>
+    </tbody>
+  </table>
+
+
+</div>
